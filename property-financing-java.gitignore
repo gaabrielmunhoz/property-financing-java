@@ -1,7 +1,0 @@
-*.class
-/bin/
-/out/
-/target/
-.DS_Store
-.idea/
-*.iml
