@@ -1,13 +1,5 @@
 package modelo;
 
-import util.InterfaceUsuario;
-
-class DescontoMaiorDoQueJurosException extends Exception{
-    public DescontoMaiorDoQueJurosException(String errorMessage){
-        super(errorMessage);
-    }
-}
-
 public class Casa extends Financiamento {
     private double areaConstruida;
     private double tamanhoTerreno;
