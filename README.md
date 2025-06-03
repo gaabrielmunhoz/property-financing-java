@@ -29,4 +29,13 @@ O projeto está dividido em três pacotes principais dentro da pasta `src`:
 
 - `util/`
   - `InterfaceUsuario.java`: interações com o usuário via terminal.
-  - `DescontoMaiorDoQueJurosException.java`: exceção personalizada para validar os dados.
+- `DescontoMaiorDoQueJurosException.java`: exceção personalizada para validar os dados.
+
+## 🚀 Como Compilar
+
+Para evitar problemas de caracteres acentuados no terminal, compile e execute o projeto com UTF-8 habilitado:
+
+```bash
+javac -encoding UTF-8 main/*.java modelo/*.java util/*.java
+java -Dfile.encoding=UTF-8 main.Main
+```
