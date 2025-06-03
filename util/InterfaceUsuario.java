@@ -210,7 +210,7 @@ public class InterfaceUsuario {
         try (ObjectInputStream objeto = new ObjectInputStream(new FileInputStream(caminhoArquivo))){
             return (List<Financiamento>) objeto.readObject();
         } catch (IOException | ClassNotFoundException e){
-            System.out.println("Erro ao ler dados serialziados: " + e.getMessage());
+            System.out.println("Erro ao ler dados serializados: " + e.getMessage());
             return null;
         }
     }
