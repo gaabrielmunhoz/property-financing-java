@@ -27,7 +27,7 @@ public class Casa extends Financiamento {
     }
 
     public double calcularPagamentoMensal() {
-        double valorJurosMensal = 1 + this.taxaJurosAnual / 12;
+        double valorJurosMensal = 1 + (this.taxaJurosAnual / 12) / 100;
         double pagMensalInicial = (this.valorImovel / (this.prazoFinanciamento * 12)) * valorJurosMensal;
         double valorDescontoMensal = pagMensalInicial * this.desconto;
         double pagMensalComDesconto = pagMensalInicial - valorDescontoMensal;
