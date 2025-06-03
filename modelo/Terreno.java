@@ -9,7 +9,7 @@ public class Terreno extends Financiamento {
     }
 
     public double calcularPagamentoMensal() {
-        double pagamentoMensalTerreno = (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12));
+                double pagamentoMensalTerreno = (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12) / 100);
         return pagamentoMensalTerreno * 1.02;
     }
 
