@@ -7,10 +7,13 @@ import modelo.Terreno;
 import java.util.Scanner;
 import java.io.*;
 import java.util.List;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class InterfaceUsuario {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
     public static double obterAreaConstruida(){
         while (true) {
@@ -152,7 +155,7 @@ public class InterfaceUsuario {
     }
 
     public static void salvarFinanciamentosEmTexto(List<Financiamento> financiamentos, String caminhoArq){
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArq))) {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(caminhoArq), StandardCharsets.UTF_8)) {
             for (Financiamento financiamento : financiamentos) {
                 String linha;
                 if (financiamento instanceof Casa) {
@@ -183,7 +186,7 @@ public class InterfaceUsuario {
     }
 
     public static void lerArqTexto(String caminhoArquivo){
-        try (BufferedReader reader = new BufferedReader(new FileReader(caminhoArquivo))){
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get(caminhoArquivo), StandardCharsets.UTF_8)){
             String linha;
             System.out.println("\nDados do arquivo financiamentos.txt:");
             while((linha = reader.readLine()) != null){
