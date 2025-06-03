@@ -7,10 +7,13 @@ import modelo.Terreno;
 import util.InterfaceUsuario;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 
 
 public class Main {
     public static void main(String[] args) {
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         ArrayList<Financiamento> financiamentos = new ArrayList<>();
         System.out.println("Insira dados para o financiamento:");
         double taxaJuros = InterfaceUsuario.obterTaxaJuros();
