@@ -32,7 +32,7 @@ O projeto está dividido em três pacotes principais:
   - `DescontoMaiorDoQueJurosException.java`: exceção personalizada para validar os dados.
  
 
-## 🚀 Como executar este projeto Java
+## Como executar este projeto?
 
 Este é um projeto em Java puro, sem necessidade de frameworks ou IDE.  
 Você pode rodar diretamente pelo terminal (Linux, macOS ou Windows com Git Bash), em qualquer sistema com Java instalado.
