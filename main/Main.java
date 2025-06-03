@@ -19,17 +19,12 @@ public class Main {
         double desconto;
         while (true){
             desconto = InterfaceUsuario.obterDesconto();
-            double valorJurosMensal = 1 + (taxaJuros / 12) / 100;
-            double pagMensalInicial = (valorImovel / (prazoFinanciamentoEmAnos * 12)) * valorJurosMensal;
-            double valorDescontoMensal = pagMensalInicial * desconto;
-            if (valorDescontoMensal >= valorJurosMensal){
-                System.out.println("\nDesconto inválido! O desconto não pode ser maior ou igual ao valor dos juros mensais.\n");
-                System.out.printf("Juros mensal: %.2f%n", valorJurosMensal);
-                System.out.printf("Desconto: %.2f%n" + "\n", valorDescontoMensal);
+            if (desconto > taxaJuros){
+                System.out.println("\nDesconto inválido! O desconto não pode ser maior que a taxa de juros.\n");
+                System.out.printf("Taxa de juros: %.2f%n", taxaJuros);
+                System.out.printf("Desconto informado: %.2f%n\n", desconto);
                 System.out.println("Por favor, insira um novo desconto válido.\n");
             } else {
-                System.out.printf("\nJuros mensal: %.2f%n", valorJurosMensal);
-                System.out.printf("Desconto: %.2f%n", valorDescontoMensal);
                 break;
             }
         }
