@@ -17,14 +17,15 @@ public class Main {
         ArrayList<Financiamento> financiamentos = new ArrayList<>();
         System.out.println("Insira dados para o financiamento:");
         double taxaJuros = InterfaceUsuario.obterTaxaJuros();
+        double taxaJurosMensal = taxaJuros / 12;
         int prazoFinanciamentoEmAnos = InterfaceUsuario.obterPrazoFinanciamento();
         double valorImovel = InterfaceUsuario.obterValorImovel();
         double desconto;
         while (true){
             desconto = InterfaceUsuario.obterDesconto();
-            if (desconto > taxaJuros){
-                System.out.println("\nDesconto inválido! O desconto não pode ser maior que a taxa de juros.\n");
-                System.out.printf("Taxa de juros: %.2f%n", taxaJuros);
+            if (desconto >= taxaJurosMensal){
+                System.out.println("\nDesconto inválido! O desconto não pode ser maior ou igual à taxa de juros mensal.\n");
+                System.out.printf("Taxa de juros mensal: %.2f%n", taxaJurosMensal);
                 System.out.printf("Desconto informado: %.2f%n\n", desconto);
                 System.out.println("Por favor, insira um novo desconto válido.\n");
             } else {
