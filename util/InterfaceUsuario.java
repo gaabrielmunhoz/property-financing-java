@@ -78,7 +78,7 @@ public class InterfaceUsuario {
         }
     }
 
-// O usuário vai inserir o valor do imóvel, aceitando apensas números positivos.
+// O usuário vai inserir o valor do imóvel, aceitando apenas números positivos.
 
     public static double obterValorImovel() {
         while (true) {
