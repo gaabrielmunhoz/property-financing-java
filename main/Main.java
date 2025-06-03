@@ -19,7 +19,7 @@ public class Main {
         double desconto;
         while (true){
             desconto = InterfaceUsuario.obterDesconto();
-            double valorJurosMensal = 1 + taxaJuros / 12;
+            double valorJurosMensal = 1 + (taxaJuros / 12) / 100;
             double pagMensalInicial = (valorImovel / (prazoFinanciamentoEmAnos * 12)) * valorJurosMensal;
             double valorDescontoMensal = pagMensalInicial * desconto;
             if (valorDescontoMensal >= valorJurosMensal){
