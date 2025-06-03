@@ -1,7 +1,7 @@
 #  Simulador de Financiamento de Imóveis em Java 🏡
 
 Este é um projeto acadêmico desenvolvido como parte de uma disciplina de **Programação Orientada a Objetos** na linguagem **Java**.
-é uma aplicação simples que simula o financiamento de diferentes tipos de imóveis (Casa, Apartamento e Terreno).
+É uma aplicação simples que simula o financiamento de diferentes tipos de imóveis (Casa, Apartamento e Terreno).
 
 ## 🧠Funcionalidades
 
