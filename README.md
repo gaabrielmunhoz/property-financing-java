@@ -18,7 +18,7 @@ utilizando os princípios da Programação Orientada a Objetos (POO).
 - Lançamento de exceção personalizada caso o desconto seja maior que a taxa de juros.
 
 ## 🧱 Estrutura do Projeto
-O projeto está dividido em três pacotes principais dentro da pasta `src`:
+O projeto está dividido em três pacotes principais:
 
 - `main/`
   - `Main.java`: ponto de entrada da aplicação.
