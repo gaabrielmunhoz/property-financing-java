@@ -23,6 +23,7 @@ public class Casa extends Financiamento {
         double pagMensalInicial = (this.valorImovel / (this.prazoFinanciamento * 12)) * valorJurosMensal;
         double valorDescontoMensal = pagMensalInicial * this.desconto;
         double pagMensalComDesconto = pagMensalInicial - valorDescontoMensal;
+        pagMensalComDesconto = Math.max(pagMensalComDesconto, 0);
         return pagMensalComDesconto + 80;
     }
 
