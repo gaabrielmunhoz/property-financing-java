@@ -29,7 +29,8 @@ public class Casa extends Financiamento {
 
 
     public double calcularTotalPagamento() {
-        return calcularPagamentoMensal() * this.getPrazoFinanciamento() * 12;
+        double total = calcularPagamentoMensal() * this.getPrazoFinanciamento() * 12;
+        return Math.max(total, 0);
     }
 
     public String toString(){
