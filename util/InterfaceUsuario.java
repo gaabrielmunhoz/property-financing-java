@@ -141,9 +141,13 @@ public class InterfaceUsuario {
     public static double obterDesconto() {
         while (true) {
             try {
-                System.out.print("Digite o desconto mensal (Apenas números): ");
+                System.out.print("Digite o desconto mensal (ex: 0.05 para 5%): ");
                 double desconto = Double.parseDouble(scanner.nextLine());
-                return desconto;
+                if (desconto < 0 || desconto >= 1) {
+                    System.out.println("Desconto inválido! Digite um valor entre 0 (0%) e 1 (100%).");
+                } else {
+                    return desconto;
+                }
             } catch (NumberFormatException e) {
                 System.out.println("Formato inválido, digite apenas números.");
             }
