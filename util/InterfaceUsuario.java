@@ -142,7 +142,10 @@ public class InterfaceUsuario {
         while (true) {
             try {
                 System.out.print("Digite o desconto mensal (ex: 0.05 para 5%): ");
-                double desconto = Double.parseDouble(scanner.nextLine());
+                String entrada = scanner.nextLine().trim().replace(',', '.');
+                double desconto = Double.parseDouble(entrada);
+                if (desconto > 1)
+                    desconto /= 100;
                 if (desconto < 0 || desconto >= 1) {
                     System.out.println("Desconto inválido! Digite um valor entre 0 (0%) e 1 (100%).");
                 } else {
